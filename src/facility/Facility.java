@@ -10,7 +10,9 @@ public interface Facility {
     public void addFacilityDetail();
     public List<FacilityUse> getFacilityUses();
     public void setFacilityUses(List<FacilityUse> facilityUses);
+    public void addFacilityUse(FacilityUse facilityUse);
     public List<FacilityMaintenance> getFacilityMaints();
     public void setFacilityMaints(List<FacilityMaintenance> facilityMaints);
+    public void addFacilityMaint(FacilityMaintenance facilityMaint);
 
 }
