@@ -1,5 +1,6 @@
 package src.facility;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import src.facility_use.FacilityUse;
@@ -10,6 +11,8 @@ public class FacilityImpl implements Facility {
     private int facilityCapacity;
     private List<FacilityUse> facilityUses;
     private List<FacilityMaintenance> facilityMaints;
+    public LinkedList<String> names = new LinkedList<String>();
+    public LinkedList<Integer> capacity = new LinkedList<Integer>();
 
     public int requestAvailableCapacity(int numAtendees){
         int availableCapacity = facilityCapacity - numAtendees;
@@ -25,6 +28,8 @@ public class FacilityImpl implements Facility {
     }
 
     public void setFacilityName(String facilityName){
+        names.add(facilityName);
+        //System.out.println(names);
         this.facilityName = facilityName;
     }
 
@@ -33,6 +38,8 @@ public class FacilityImpl implements Facility {
     }
 
     public void setFacilityCapacity(int facilityCapacity){
+        capacity.add(facilityCapacity);
+        //System.out.println(capacity);
         this.facilityCapacity = facilityCapacity;
     }
 
