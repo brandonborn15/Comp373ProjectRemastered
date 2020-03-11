@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class FacilityManagementImpl implements FacilityManagement{
-    private List<Facility> facilities;
+    public List<Facility> facilities;
 
     public List<Facility> getFacilities(){
         //System.out.println(facilities);
@@ -17,9 +17,11 @@ public class FacilityManagementImpl implements FacilityManagement{
     public void setFacilities(List<Facility> facilities){
         this.facilities = facilities;
     }
-
+    @Override
     public void listFacilities(){
-        System.out.println(this.facilities);
+        //this.facilities.get(0);
+        //System.out.println(List.toString(facilities));
+        //return this.facilities;
     }
 
     public void addNewFacility(String name, Integer capacity){
