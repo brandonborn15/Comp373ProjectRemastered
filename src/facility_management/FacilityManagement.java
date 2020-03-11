@@ -1,7 +1,12 @@
 package src.facility_management;
 
-public class FacilityManagement {
-    public static void Main(String [] args){
+import src.facility.Facility;
 
-    }
+public interface FacilityManagement {
+    
+    public void listFacilities();
+    public void addNewFacility(Facility facility);
+    public void removeFacility(Facility facility);
+    public void getFacilityInformation(Facility facility);
+    
 }
