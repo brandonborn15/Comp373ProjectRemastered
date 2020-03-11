@@ -8,8 +8,8 @@ public interface FacilityManagement {
     
     public List<Facility> getFacilities();
     public void setFacilities(List<Facility> facilities);
-    public void listFacilities();
-    public void addNewFacility(String name, Integer capacity);
+    public List<String> listFacilities();
+    public void addNewFacility(Facility facility);
     public void removeFacility(Facility facility);
     public void getFacilityInformation(Facility facility);
 
