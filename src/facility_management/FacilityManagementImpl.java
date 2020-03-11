@@ -3,7 +3,7 @@ package src.facility_management;
 import src.facility.Facility;
 import src.facility.FacilityImpl;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class FacilityManagementImpl implements FacilityManagement{
@@ -18,9 +18,10 @@ public class FacilityManagementImpl implements FacilityManagement{
     }
 
     
-    public List<String> listFacilities(){
-        List<String> facilityNames = new ArrayList<>();
-        facilityNames.add("damen den");
+    public String listFacilities(){
+        FacilityImpl fac = new FacilityImpl();
+        String facilityNames = fac.names.toString();
+        System.out.println(fac.names);
         return facilityNames;
 
     }
