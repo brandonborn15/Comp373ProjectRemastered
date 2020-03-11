@@ -24,13 +24,17 @@ public class FacilityManagementClient{
         facility2.setFacilityCapacity(7000);
         facility2.setFacilityName("gentile arena");
         facilities.add(facility2);
+
+        FacilityImpl facility3 = new FacilityImpl();
+        facility3.setFacilityCapacity(10000);
+        facility3.setFacilityName("sullivan center");
+        facilities.add(facility3);
         
         manage.setFacilities(facilities);
         System.out.println(manage.getFacilities().size()+"\n");
         manage.removeFacility(facility1);
         System.out.println(manage.getFacilities().size()+"\n");
-        manage.addNewFacility(facility1);
-        manage.addNewFacility(facility2);
+        manage.addNewFacility(facility3);
         System.out.println(manage.getFacilities().size()+"\n");
         manage.listFacilities();
         System.out.println(manage.listFacilities());
