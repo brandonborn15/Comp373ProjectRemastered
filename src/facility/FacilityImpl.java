@@ -17,7 +17,7 @@ public class FacilityImpl implements Facility {
     }
     
     public void addFacilityDetail(){
-
+        //TODO
     }
 
     public String getFacilityName(){
@@ -50,5 +50,13 @@ public class FacilityImpl implements Facility {
 
     public void setFacilityMaints(List<FacilityMaintenance> facilityMaints){
         this.facilityMaints = facilityMaints;
+    }
+
+    public void addFacilityUse(FacilityUse facilityUse){
+        facilityUses.add(facilityUse);
+    }
+
+    public void addFacilityMaint(FacilityMaintenance facilityMaint){
+        facilityMaints.add(facilityMaint);
     }
 }
