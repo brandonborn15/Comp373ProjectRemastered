@@ -18,10 +18,12 @@ public class FacilityManagementImpl implements FacilityManagement{
         this.facilities = facilities;
     }
     @Override
-    public void listFacilities(){
+    public String listFacilities(){
         //this.facilities.get(0);
-        //System.out.println(List.toString(facilities));
-        //return this.facilities;
+        //facilities.toString();
+        System.out.println(facilities.get(0).toString());
+    
+        return String.format(facilities.toString());
     }
 
     public void addNewFacility(String name, Integer capacity){
