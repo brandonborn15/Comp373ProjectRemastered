@@ -6,7 +6,6 @@ import src.facility_use.FacilityUse;
 import src.facility_maintenance.FacilityMaintenance;
 
 public class FacilityImpl implements Facility {
-    public List<Facility> facilities;
     private String facilityName;
     private int facilityCapacity;
     private List<FacilityUse> facilityUses;
