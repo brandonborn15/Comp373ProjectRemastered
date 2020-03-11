@@ -29,12 +29,11 @@ public class FacilityManagementClient{
         System.out.println(manage.getFacilities().size()+"\n");
         manage.removeFacility(facility1);
         System.out.println(manage.getFacilities().size()+"\n");
-        manage.addNewFacility("sullivan center", 5000);
-        manage.addNewFacility("dumbach hall", 10000);
-        manage.addNewFacility("IC", 7000);
+        manage.addNewFacility(facility1);
+        manage.addNewFacility(facility2);
         System.out.println(manage.getFacilities().size()+"\n");
         manage.listFacilities();
-        System.out.println();
+        System.out.println(manage.listFacilities());
         //FacilityUseImpl myFacilityUse = new FacilityUseImpl();
         FacilityMaintenanceImpl maint = new FacilityMaintenanceImpl();
 
