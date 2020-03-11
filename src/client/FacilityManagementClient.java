@@ -25,19 +25,16 @@ public class FacilityManagementClient{
         facility2.setFacilityName("gentile arena");
         facilities.add(facility2);
         
-        /*FacilityManagementImpl myFacility = new FacilityManagementImpl();
-        myFacility.setFacilities(facilities);
-        myFacility.getFacilities();
-        System.out.println();
-        System.out.println(myFacility.getFacilities());*/
         manage.setFacilities(facilities);
         System.out.println(manage.getFacilities().size()+"\n");
         manage.removeFacility(facility1);
         System.out.println(manage.getFacilities().size()+"\n");
         manage.addNewFacility("sullivan center", 5000);
+        manage.addNewFacility("dumbach hall", 10000);
+        manage.addNewFacility("IC", 7000);
         System.out.println(manage.getFacilities().size()+"\n");
-        //System.out.println(facility1.getFacilityName()+": "+facility1.getFacilityCapacity()+"\n");
-        //System.out.println(facility2.getFacilityName()+": "+facility2.getFacilityCapacity()+"\n");
+        manage.listFacilities();
+        System.out.println();
         //FacilityUseImpl myFacilityUse = new FacilityUseImpl();
         FacilityMaintenanceImpl maint = new FacilityMaintenanceImpl();
 
