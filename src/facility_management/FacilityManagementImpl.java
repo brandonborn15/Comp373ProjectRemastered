@@ -16,11 +16,13 @@ public class FacilityManagementImpl implements FacilityManagement{
     public void setFacilities(List<Facility> facilities){
         this.facilities = facilities;
     }
+
     
     public List<String> listFacilities(){
         List<String> facilityNames = new ArrayList<>();
         facilityNames.add("damen den");
         return facilityNames;
+
     }
 
     public void addNewFacility(Facility facility){
