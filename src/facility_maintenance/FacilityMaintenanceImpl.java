@@ -15,10 +15,6 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         this.requests = requests;
     }
 
-    public void addRequest(Request request){
-        requests.add(request);
-    }
-
     public List<ScheduleMaintenance> getSchedMaints(){
         return schedMaints;
     }
@@ -27,11 +23,15 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         this.schedMaints = schedMaints;
     }
 
-    public void addSchedMaint(ScheduleMaintenance schedMaint){
+    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
+    public void makeFacilityMaintRequest(Request request){ //Finished
+        requests.add(request);
+    }
+    
+    public void scheduleMaintenance(ScheduleMaintenance schedMaint){ //Finished
         schedMaints.add(schedMaint);
     }
 
-    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
     public Double calcProblemRateForFacility(){ //Not finished
         Double problemRate = 0.00;
         return problemRate;

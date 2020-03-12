@@ -27,7 +27,7 @@ public class FacilityUseImpl implements FacilityUse{
         this.inspections = inspections;
     }
 
-    public void addInspection(Inspection inspection){
+    public void scheduleInspection(Inspection inspection){
         inspections.add(inspection);
     }
 

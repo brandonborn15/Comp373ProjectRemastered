@@ -6,11 +6,11 @@ public interface FacilityMaintenance {
     
     public List<Request> getRequests();
     public void setRequests(List<Request> requests);
-    public void addRequest(Request request);
     public List<ScheduleMaintenance> getSchedMaints();
     public void setSchedMaints(List<ScheduleMaintenance> schedMaints);
-    public void addSchedMaint(ScheduleMaintenance schedMaint);
     
+    public void makeFacilityMaintRequest(Request request);
+    public void scheduleMaintenance(ScheduleMaintenance schedMaint);
     public Double calcProblemRateForFacility();
     public void listMaintRequests();
     public void listMaintenance();
