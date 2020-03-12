@@ -32,16 +32,26 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         schedMaints.add(schedMaint);
     }
 
-    public Double calcProblemRateForFacility(){ //Not finished get lenght of requests/90
-        Double problemRate = 0.00;
+    public Double calcProblemRateForFacility(){ //Finished
+        Double problemRate;
+        int problems = requests.size();
+        problemRate = problems / 90.0;
         return problemRate;
     }
 
-    public void listMaintRequests(){ //Not finished print lists of requests of a string 
-
+    public LinkedList<String> listMaintRequests(){ //Finished
+        LinkedList<String> reqs = new LinkedList<String>();
+        for (Request request : requests){
+            reqs.add(request.getMaintRequest());
+        }
+        return reqs;
     }
 
-    public void listMaintenance(){ //Not finished finished print lists of dates of a string
-        
+    public LinkedList<String> listMaintenance(){ //Finished
+        LinkedList<String> sMs = new LinkedList<String>();
+        for (ScheduleMaintenance sM : schedMaints){
+            sMs.add(sM.getMaintDate());
+        }
+        return sMs;
     }
 }

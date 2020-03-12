@@ -21,6 +21,6 @@ public interface Facility {
     public void addFacilityMaint(FacilityMaintenanceImpl facilityMaint);
     
     public int requestAvailableCapacity(int numAtendees);
-    public void addFacilityDetail();
+    public void addFacilityDetail(String description);
 
 }

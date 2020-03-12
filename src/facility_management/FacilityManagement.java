@@ -11,6 +11,7 @@ public interface FacilityManagement {
     
     public void addNewFacility(FacilityImpl facility);
     public void removeFacility(FacilityImpl facility);
-    public void getFacilityInformation(FacilityImpl facility);
+    public LinkedList<String> listFacilities();
+    public LinkedList<String> getFacilityInformation(FacilityImpl facility);
 
 }

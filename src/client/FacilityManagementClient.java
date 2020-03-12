@@ -65,20 +65,10 @@ public class FacilityManagementClient{
         manage.addNewFacility(facility2);
         manage.addNewFacility(facility3);
         facilities = manage.getFacilities();
-
-        for (FacilityImpl facility : facilities) {
-            System.out.println(facility.getFacilityName());
-            LinkedList<FacilityUseImpl> facUses = new LinkedList<FacilityUseImpl>();
-            facUses = facility.getFacilityUses();
-            for (FacilityUseImpl facUse : facUses) {
-                LinkedList<InspectionImpl> inspecs = new LinkedList<InspectionImpl>();
-                inspecs = facUse.getInspections();
-                for (Inspection ins : inspecs){
-                    System.out.println(ins.getInspectionDate());
-                }
-            }
-        }
-
+        System.out.println(facilities.size());
+        manage.removeFacility(facility1);
+        facilities = manage.getFacilities();
+        System.out.println(facilities.size());
     }
 
 

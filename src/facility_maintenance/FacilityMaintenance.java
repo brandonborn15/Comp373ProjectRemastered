@@ -14,7 +14,7 @@ public interface FacilityMaintenance {
     public void scheduleMaintenance(ScheduleMaintenanceImpl schedMaint);
 
     public Double calcProblemRateForFacility();
-    public void listMaintRequests();
-    public void listMaintenance();
+    public LinkedList<String> listMaintRequests();
+    public LinkedList<String> listMaintenance();
 
 }

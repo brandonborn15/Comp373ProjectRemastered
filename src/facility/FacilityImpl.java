@@ -8,6 +8,7 @@ import src.facility_maintenance.*;
 public class FacilityImpl implements Facility {
     private String facilityName;
     private int facilityCapacity;
+    private String description;
     private LinkedList<FacilityUseImpl> facilityUses = new LinkedList<>();
     private LinkedList<FacilityMaintenanceImpl> facilityMaints = new LinkedList<>();
 
@@ -32,6 +33,10 @@ public class FacilityImpl implements Facility {
         return facilityUses;
     }
 
+    public String getDescription(){
+        return description;
+    }
+
     public void setFacilityUses(LinkedList<FacilityUseImpl> facilityUses){
         this.facilityUses = facilityUses;
     }
@@ -53,12 +58,12 @@ public class FacilityImpl implements Facility {
     }
 
     //Required Methods for Assignment-----------------------------------------------------------------------------------------------------
-    public void addFacilityDetail(){ //make new variable for discription of facility
-        
-    }
-
-    public int requestAvailableCapacity(int numAtendees){ //request full capacity subtracing the number of attendies and return difference
+    public int requestAvailableCapacity(int numAtendees){ //FINISHED
         int availableCapacity = facilityCapacity - numAtendees;
         return availableCapacity;
+    }
+
+    public void addFacilityDetail(String description){ //FINISHED
+        this.description = description;
     }
 }
