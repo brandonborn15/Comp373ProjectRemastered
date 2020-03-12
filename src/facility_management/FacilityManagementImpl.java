@@ -20,16 +20,22 @@ public class FacilityManagementImpl implements FacilityManagement{
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addNewFacility(FacilityImpl facility){ //not Finished
+    public void addNewFacility(FacilityImpl facility){ //Finished
         //System.out.println(facility);
         this.fac.add(facility);
     }
 
-    public void removeFacility(FacilityImpl facility){ //not Finished
+    public void removeFacility(FacilityImpl facility){ //NEEDS TO BE TESTED
         this.fac.remove(facility);
     }
 
-    public void getFacilityInformation(FacilityImpl facility){ //Not finished print all variables of a facility
-
+    public void getFacilityInformation(FacilityImpl facility){ //Not finished 
+        //Return a list of Strings containing: facilityName, facilityCapacity, any inspections, and reservations, any requests, and any scheduledMaintenance
+        LinkedList<String> info = new LinkedList<String>();
+        String facilityName = facility.getFacilityName();
+        int facilityCapacityInt = facility.getFacilityCapacity();
+        String facilityCapacity = Integer.toString(facilityCapacityInt);
+        info.add(facilityName);
+        info.add(facilityCapacity);
     }
 }

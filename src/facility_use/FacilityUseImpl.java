@@ -24,11 +24,11 @@ public class FacilityUseImpl implements FacilityUse{
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addReservation(GeneralUseImpl reservation){ //not Finished
+    public void addReservation(GeneralUseImpl reservation){ //Finished
         res.add(reservation);
     }
     
-    public void scheduleInspection(InspectionImpl inspection){ //not Finished
+    public void scheduleInspection(InspectionImpl inspection){ //Finished
         ins.add(inspection);
     }
 
@@ -40,7 +40,7 @@ public class FacilityUseImpl implements FacilityUse{
     public void vacateFacility(String vacateDate){ //Not finished returns the date that reoccurs for the corrsiponding facility
 
     }
-    public void listActualUsage(){ //Not finished move to facility use
+    public void listActualUsage(){ //Not finished
 
     }
     public Double calcUsageRate(){ //Not finished moved to facility use, size of reservations/90 return number 

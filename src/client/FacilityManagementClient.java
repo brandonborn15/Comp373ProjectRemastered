@@ -32,7 +32,7 @@ public class FacilityManagementClient{
         facUse1.scheduleInspection(inspection1);
         facUse1.addReservation(genUse1);
 
-        /*//Set Up Request Object
+        //Set Up Request Object
         RequestImpl request = new RequestImpl();
         request.setMaintRequest("The toilets are clogged");
 
@@ -42,14 +42,14 @@ public class FacilityManagementClient{
 
         //Set Up Facility Maintenance Object
         FacilityMaintenanceImpl facMaint1 = new FacilityMaintenanceImpl();
-        //facMaint1.makeFacilityMaintRequest(request);
-        //facMaint1.scheduleMaintenance(schedMaint1);*/
+        facMaint1.makeFacilityMaintRequest(request);
+        facMaint1.scheduleMaintenance(schedMaint1);
 
         //Set Up Facility Object
         FacilityImpl facility1 = new FacilityImpl();
         facility1.setFacilityCapacity(3000);
         facility1.setFacilityName("damen den");
-        //facility1.addFacilityMaint(facMaint1);
+        facility1.addFacilityMaint(facMaint1);
         facility1.addFacilityUse(facUse1);
         
         //------------------------------------------------------Little Objects---------------------------------------------------------------------------
@@ -62,11 +62,8 @@ public class FacilityManagementClient{
         facility3.setFacilityName("sullivan center");
         //---------------------------------------------------------------------------------------------------------------------------------
         manage.addNewFacility(facility1);
-        //manage.addNewFacility(facility2);
-        //manage.addNewFacility(facility3);
-        //facilities.add(facility1);
-        //facilities.add(facility2);
-        //facilities.add(facility3);
+        manage.addNewFacility(facility2);
+        manage.addNewFacility(facility3);
         facilities = manage.getFacilities();
 
         for (FacilityImpl facility : facilities) {

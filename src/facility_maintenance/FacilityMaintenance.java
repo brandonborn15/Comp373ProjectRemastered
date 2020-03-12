@@ -1,20 +1,19 @@
 package src.facility_maintenance;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public interface FacilityMaintenance {
     
-    public List<Request> getRequests();
-    public void setRequests(List<Request> requests);
+    public LinkedList<RequestImpl> getRequests();
+    public void setRequests(LinkedList<RequestImpl> requests);
 
-    public List<ScheduleMaintenance> getSchedMaints();
-    public void setSchedMaints(List<ScheduleMaintenance> schedMaints);
+    public LinkedList<ScheduleMaintenanceImpl> getSchedMaints();
+    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints);
     
-    public void makeFacilityMaintRequest(Request request);
-    public void scheduleMaintenance(ScheduleMaintenance schedMaint);
+    public void makeFacilityMaintRequest(RequestImpl request);
+    public void scheduleMaintenance(ScheduleMaintenanceImpl schedMaint);
 
     public Double calcProblemRateForFacility();
-    
     public void listMaintRequests();
     public void listMaintenance();
 

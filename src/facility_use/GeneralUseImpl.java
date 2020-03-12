@@ -10,6 +10,4 @@ public class GeneralUseImpl implements GeneralUse {
     public void setResDate(String resDate){
         this.resDate = resDate;
     }
-    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    
 }

@@ -1,34 +1,34 @@
 package src.facility_maintenance;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public class FacilityMaintenanceImpl implements FacilityMaintenance {
-    private List<Request> requests;
-    private List<ScheduleMaintenance> schedMaints;
+    private LinkedList<RequestImpl> requests = new LinkedList<RequestImpl>();
+    private LinkedList<ScheduleMaintenanceImpl> schedMaints = new LinkedList<ScheduleMaintenanceImpl>();
 
     //Getters, Setters, and Add Methods----------------------------------------------------------------------------------------------------
-    public List<Request> getRequests(){
+    public LinkedList<RequestImpl> getRequests(){
         return requests;
     }
 
-    public void setRequests(List<Request> requests){
+    public void setRequests(LinkedList<RequestImpl> requests){
         this.requests = requests;
     }
 
-    public List<ScheduleMaintenance> getSchedMaints(){
+    public LinkedList<ScheduleMaintenanceImpl> getSchedMaints(){
         return schedMaints;
     }
 
-    public void setSchedMaints(List<ScheduleMaintenance> schedMaints){ //not finished
+    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints){ //not finished
         this.schedMaints = schedMaints;
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void makeFacilityMaintRequest(Request request){ //not Finished
+    public void makeFacilityMaintRequest(RequestImpl request){ //Finished
         requests.add(request);
     }
     
-    public void scheduleMaintenance(ScheduleMaintenance schedMaint){ //Finished
+    public void scheduleMaintenance(ScheduleMaintenanceImpl schedMaint){ //Finished
         schedMaints.add(schedMaint);
     }
 

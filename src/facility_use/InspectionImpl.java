@@ -11,8 +11,4 @@ public class InspectionImpl implements Inspection {
     public void setInspectionDate(String inspectionDate){
         this.inspectionDate = inspectionDate;
     }
-
-    //Required Methods for Assignment-----------------------------------------------------------------------------------------------------
-
-    
 }
