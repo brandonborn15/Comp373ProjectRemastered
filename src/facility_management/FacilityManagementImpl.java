@@ -17,15 +17,15 @@ public class FacilityManagementImpl implements FacilityManagement{
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addNewFacility(Facility facility){ //Finished
+    public void addNewFacility(Facility facility){ //not Finished
         this.facilities.add(facility);
     }
 
-    public void removeFacility(Facility facility){ //Finished
+    public void removeFacility(Facility facility){ //not Finished
         this.facilities.remove(facility);
     }
 
-    public void getFacilityInformation(Facility facility){ //Not finished
+    public void getFacilityInformation(Facility facility){ //Not finished print all variables of a facility
 
     }
 }

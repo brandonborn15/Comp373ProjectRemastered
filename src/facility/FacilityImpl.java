@@ -53,11 +53,11 @@ public class FacilityImpl implements Facility {
     }
 
     //Required Methods for Assignment-----------------------------------------------------------------------------------------------------
-    public void addFacilityDetail(){ //Not finished
+    public void addFacilityDetail(){ //make new variable for discription of facility
         
     }
 
-    public int requestAvailableCapacity(int numAtendees){ //Not finished
+    public int requestAvailableCapacity(int numAtendees){ //request full capacity subtracing the number of attendies and return difference
         int availableCapacity = facilityCapacity - numAtendees;
         return availableCapacity;
     }

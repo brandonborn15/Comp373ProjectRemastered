@@ -19,12 +19,12 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         return schedMaints;
     }
 
-    public void setSchedMaints(List<ScheduleMaintenance> schedMaints){
+    public void setSchedMaints(List<ScheduleMaintenance> schedMaints){ //not finished
         this.schedMaints = schedMaints;
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void makeFacilityMaintRequest(Request request){ //Finished
+    public void makeFacilityMaintRequest(Request request){ //not Finished
         requests.add(request);
     }
     
@@ -32,16 +32,16 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         schedMaints.add(schedMaint);
     }
 
-    public Double calcProblemRateForFacility(){ //Not finished
+    public Double calcProblemRateForFacility(){ //Not finished get lenght of requests/90
         Double problemRate = 0.00;
         return problemRate;
     }
 
-    public void listMaintRequests(){ //Not finished
+    public void listMaintRequests(){ //Not finished print lists of requests of a string 
 
     }
 
-    public void listMaintenance(){ //Not finished
+    public void listMaintenance(){ //Not finished finished print lists of dates of a string
         
     }
 }

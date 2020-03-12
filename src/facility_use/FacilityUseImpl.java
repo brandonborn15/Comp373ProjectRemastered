@@ -24,20 +24,33 @@ public class FacilityUseImpl implements FacilityUse{
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addReservation(GeneralUse reservation){ //Finished
+    public void addReservation(GeneralUse reservation){ //not Finished
         reservations.add(reservation);
     }
     
-    public void scheduleInspection(Inspection inspection){ //Finished
+    public void scheduleInspection(Inspection inspection){ //not Finished
         inspections.add(inspection);
     }
 
-    public boolean isInUseDuringInterval(String targetDate){ //Not finished
+    public boolean isInUseDuringInterval(String targetDate){ //Not finished take in target date, check if it already exists, return boolean true or false
         boolean isInUse = false;
         return isInUse;
     }
 
-    public void vacateFacility(String vacateDate){ //Not finished
+    public void vacateFacility(String vacateDate){ //Not finished returns the date that reoccurs for the corrsiponding facility
+
+    }
+    public void listActualUsage(){ //Not finished move to facility use
+
+    }
+    public Double calcUsageRate(){ //Not finished moved to facility use, size of reservations/90 return number 
+        Double usageRate = 0.00;
+        return usageRate;
+    }
+    public void assignFacilityToUse(int atendees){ //Not finished
+
+    }
+    public void listInspections(){ //Not finished moved to facility use
 
     }
 }
