@@ -1,9 +1,9 @@
 package src.facility;
 
-import java.util.List;
+import java.util.LinkedList;
 
-import src.facility_use.FacilityUse;
-import src.facility_maintenance.FacilityMaintenance;
+import src.facility_use.*;
+import src.facility_maintenance.*;
 public interface Facility {
     
     public String getFacilityName();
@@ -12,13 +12,13 @@ public interface Facility {
     public int getFacilityCapacity();
     public void setFacilityCapacity(int facilityCapacity);
 
-    public List<FacilityUse> getFacilityUses();
-    public void setFacilityUses(List<FacilityUse> facilityUses);
-    public void addFacilityUse(FacilityUse facilityUse);
+    public LinkedList<FacilityUseImpl> getFacilityUses();
+    public void setFacilityUses(LinkedList<FacilityUseImpl> facilityUses);
+    public void addFacilityUse(FacilityUseImpl facilityUse);
     
-    public List<FacilityMaintenance> getFacilityMaints();
-    public void setFacilityMaints(List<FacilityMaintenance> facilityMaints);
-    public void addFacilityMaint(FacilityMaintenance facilityMaint);
+    public LinkedList<FacilityMaintenanceImpl> getFacilityMaints();
+    public void setFacilityMaints(LinkedList<FacilityMaintenanceImpl> facilityMaints);
+    public void addFacilityMaint(FacilityMaintenanceImpl facilityMaint);
     
     public int requestAvailableCapacity(int numAtendees);
     public void addFacilityDetail();

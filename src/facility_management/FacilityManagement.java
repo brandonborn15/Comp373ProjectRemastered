@@ -1,16 +1,16 @@
 package src.facility_management;
 
-import java.util.List;
+import java.util.LinkedList;
 
-import src.facility.Facility;
+import src.facility.*;
 
 public interface FacilityManagement {
     
-    public List<Facility> getFacilities();
-    public void setFacilities(List<Facility> facilities);
+    public LinkedList<FacilityImpl> getFacilities();
+    public void setFacilities(LinkedList<FacilityImpl> facilities);
     
-    public void addNewFacility(Facility facility);
-    public void removeFacility(Facility facility);
-    public void getFacilityInformation(Facility facility);
+    public void addNewFacility(FacilityImpl facility);
+    public void removeFacility(FacilityImpl facility);
+    public void getFacilityInformation(FacilityImpl facility);
 
 }

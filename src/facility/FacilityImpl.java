@@ -1,15 +1,15 @@
 package src.facility;
 
-import java.util.List;
+import java.util.LinkedList;
 
-import src.facility_use.FacilityUse;
-import src.facility_maintenance.FacilityMaintenance;
+import src.facility_use.*;
+import src.facility_maintenance.*;
 
 public class FacilityImpl implements Facility {
     private String facilityName;
     private int facilityCapacity;
-    private List<FacilityUse> facilityUses;
-    private List<FacilityMaintenance> facilityMaints;
+    private LinkedList<FacilityUseImpl> facilityUses = new LinkedList<>();
+    private LinkedList<FacilityMaintenanceImpl> facilityMaints = new LinkedList<>();
 
     //Getters, Setters, and Add Methods-----------------------------------------------------------------------------------------------------
     public String getFacilityName(){
@@ -28,27 +28,27 @@ public class FacilityImpl implements Facility {
         this.facilityCapacity = facilityCapacity;
     }
 
-    public List<FacilityUse> getFacilityUses(){
+    public LinkedList<FacilityUseImpl> getFacilityUses(){
         return facilityUses;
     }
 
-    public void setFacilityUses(List<FacilityUse> facilityUses){
+    public void setFacilityUses(LinkedList<FacilityUseImpl> facilityUses){
         this.facilityUses = facilityUses;
     }
 
-    public void addFacilityUse(FacilityUse facilityUse){
+    public void addFacilityUse(FacilityUseImpl facilityUse){
         facilityUses.add(facilityUse);
     }
 
-    public List<FacilityMaintenance> getFacilityMaints(){
+    public LinkedList<FacilityMaintenanceImpl> getFacilityMaints(){
         return facilityMaints;
     }
 
-    public void setFacilityMaints(List<FacilityMaintenance> facilityMaints){
+    public void setFacilityMaints(LinkedList<FacilityMaintenanceImpl> facilityMaints){
         this.facilityMaints = facilityMaints;
     }
 
-    public void addFacilityMaint(FacilityMaintenance facilityMaint){
+    public void addFacilityMaint(FacilityMaintenanceImpl facilityMaint){
         facilityMaints.add(facilityMaint);
     }
 

@@ -1,35 +1,35 @@
 package src.facility_use;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public class FacilityUseImpl implements FacilityUse{
-    private List<GeneralUse> reservations;
-    private List<Inspection> inspections;
+    private LinkedList<InspectionImpl> ins = new LinkedList<>();
+    private LinkedList<GeneralUseImpl> res = new LinkedList<>();
 
     //Getters, Setters, and Add Methods-----------------------------------------------------------------------------------------------------
-    public List<GeneralUse> getReservations(){
-        return reservations;
+    public LinkedList<GeneralUseImpl> getReservations(){
+        return res;
     }
 
-    public void setReservations(List<GeneralUse> reservations){
-        this.reservations = reservations;
+    public void setReservations(LinkedList<GeneralUseImpl> res){
+        this.res = res;
     }
 
-    public List<Inspection> getInspections(){
-        return inspections;
+    public LinkedList<InspectionImpl> getInspections(){
+        return ins;
     }
 
-    public void setInspections(List<Inspection> inspections){
-        this.inspections = inspections;
+    public void setInspections(LinkedList<InspectionImpl> ins){
+        this.ins = ins;
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addReservation(GeneralUse reservation){ //not Finished
-        reservations.add(reservation);
+    public void addReservation(GeneralUseImpl reservation){ //not Finished
+        res.add(reservation);
     }
     
-    public void scheduleInspection(Inspection inspection){ //not Finished
-        inspections.add(inspection);
+    public void scheduleInspection(InspectionImpl inspection){ //not Finished
+        ins.add(inspection);
     }
 
     public boolean isInUseDuringInterval(String targetDate){ //Not finished take in target date, check if it already exists, return boolean true or false

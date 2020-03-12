@@ -1,16 +1,16 @@
 package src.facility_use;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public interface FacilityUse {
     
-    public List<GeneralUse> getReservations();
-    public void setReservations(List<GeneralUse> reservations);
-    public void addReservation(GeneralUse reservation);
+    public LinkedList<GeneralUseImpl> getReservations();
+    public void setReservations(LinkedList<GeneralUseImpl> reservations);
+    public void addReservation(GeneralUseImpl reservation);
 
-    public List<Inspection> getInspections();
-    public void setInspections(List<Inspection> inspections);
-    public void scheduleInspection(Inspection inspection);
+    public LinkedList<InspectionImpl> getInspections();
+    public void setInspections(LinkedList<InspectionImpl> inspections);
+    public void scheduleInspection(InspectionImpl inspection);
     
     public boolean isInUseDuringInterval(String targetDate);
     public void vacateFacility(String vacateDate);
