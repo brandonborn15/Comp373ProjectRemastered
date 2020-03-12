@@ -28,7 +28,7 @@ public class FacilityUseImpl implements FacilityUse{
     }
 
     public void addInspection(Inspection inspection){
-        inspections.add(inspection);
+        this.inspections.add(inspection);
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
