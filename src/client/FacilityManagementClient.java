@@ -35,6 +35,7 @@ public class FacilityManagementClient{
         //Set Up Request Object
         RequestImpl request = new RequestImpl();
         request.setMaintRequest("The toilets are clogged");
+        request.setMaintRequest("The toilet paper repair");
 
         //Set Up Schedule Maintenance Object
         ScheduleMaintenanceImpl schedMaint1 = new ScheduleMaintenanceImpl();
@@ -43,7 +44,6 @@ public class FacilityManagementClient{
         //Set Up Facility Maintenance Object
         FacilityMaintenanceImpl facMaint1 = new FacilityMaintenanceImpl();
         facMaint1.makeFacilityMaintRequest(request);
-        facMaint1.scheduleMaintenance(schedMaint1);
 
         //Set Up Facility Object
         FacilityImpl facility1 = new FacilityImpl();
@@ -61,14 +61,23 @@ public class FacilityManagementClient{
         facility3.setFacilityCapacity(10000);
         facility3.setFacilityName("sullivan center");
         //---------------------------------------------------------------------------------------------------------------------------------
-        manage.addNewFacility(facility1);
+        manage.addNewFacility(facility1);//add the new facilities created to the Facility Management
         manage.addNewFacility(facility2);
         manage.addNewFacility(facility3);
-        facilities = manage.getFacilities();
+
+        facilities = manage.getFacilities();//retrieves the list of all facilities
         System.out.println(facilities.size());
-        manage.removeFacility(facility1);
+        System.out.println(facilities);//will print the hashcode locations for these facilities
+
+        manage.removeFacility(facility2);//removes completly the object known as facility 2 from the management
         facilities = manage.getFacilities();
-        System.out.println(facilities.size());
+        System.out.println(facilities.size());//prints the amount of facilities threr are under management
+
+        System.out.println(facility1.getFacilityName());//facility1 exists only in the client but not declared or modified anywhere in management
+        System.out.println(manage.listFacilities());//prints the names of all fcilities
+
+        System.out.println(facMaint1.listMaintenance());
+        //System.out.println(facUse1.list());
     }
 
 
