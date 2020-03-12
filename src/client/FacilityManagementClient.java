@@ -24,7 +24,7 @@ public class FacilityManagementClient{
 
         //Set Up Facility Use Object
         FacilityUseImpl facUse1 = new FacilityUseImpl();
-        facUse1.addInspection(inspection1);
+        facUse1.scheduleInspection(inspection1);
         facUse1.addReservation(genUse1);
 
         //Set Up Request Object
@@ -37,8 +37,8 @@ public class FacilityManagementClient{
 
         //Set Up Facility Maintenance Object
         FacilityMaintenanceImpl facMaint1 = new FacilityMaintenanceImpl();
-        facMaint1.addRequest(request);
-        facMaint1.addSchedMaint(schedMaint1);
+        facMaint1.makeFacilityMaintRequest(request);
+        facMaint1.scheduleMaintenance(schedMaint1);
 
         //Set Up Facility Object
         FacilityImpl facility1 = new FacilityImpl();

@@ -11,9 +11,4 @@ public class RequestImpl implements Request {
     public void setMaintRequest(String maintRequest){
         this.maintRequest = maintRequest;
     }
-
-    //Required Methods for Assignment-------------------------------------------------------------------------------------------------------
-    public void makeFacilityMaintRequest(){ //Not finished
-
-    }
 }

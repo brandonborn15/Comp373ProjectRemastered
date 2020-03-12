@@ -9,8 +9,8 @@ public interface FacilityUse {
     public void addReservation(GeneralUse reservation);
     public List<Inspection> getInspections();
     public void setInspections(List<Inspection> inspections);
-    public void addInspection(Inspection inspection);
     
+    public void scheduleInspection(Inspection inspection);
     public boolean isInUseDuringInterval(String targetDate);
     public void vacateFacility(String vacateDate);
 

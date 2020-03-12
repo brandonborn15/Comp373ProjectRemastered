@@ -5,7 +5,6 @@ public interface Inspection {
     public String getInspectionDate();
     public void setInspectionDate(String inspectionDate);
     
-    public void scheduleInspection();
     public void listInspections();
 
 }

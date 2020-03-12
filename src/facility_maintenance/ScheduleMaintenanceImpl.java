@@ -13,10 +13,6 @@ public class ScheduleMaintenanceImpl implements ScheduleMaintenance {
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void scheduleMaintenance(){ //Not finished
-
-    }
-
     public int calcDownTimeForFacility(){ //Not finished
         int downTime = 0;
         return downTime;

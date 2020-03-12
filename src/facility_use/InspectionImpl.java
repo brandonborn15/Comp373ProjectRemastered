@@ -13,9 +13,6 @@ public class InspectionImpl implements Inspection {
     }
 
     //Required Methods for Assignment-----------------------------------------------------------------------------------------------------
-    public void scheduleInspection(){ //Not finished
-
-    }
 
     public void listInspections(){ //Not finished
 
