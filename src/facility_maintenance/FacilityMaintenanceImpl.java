@@ -14,12 +14,20 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         this.requests = requests;
     }
 
+    public void addRequest(Requests request){
+        
+    }
+
     public List<ScheduleMaintenance> getSchedMaints(){
         return schedMaints;
     }
 
     public void setSchedMaints(List<ScheduleMaintenance> schedMaints){
         this.schedMaints = schedMaints;
+    }
+
+    public void addSchedMaint(ScheduleMaintenance schedMaint){
+        
     }
 
     public Double calcProblemRateForFacility(){

@@ -14,6 +14,10 @@ public class FacilityUseImpl implements FacilityUse{
         this.reservations = reservations;
     }
 
+    public void addReservation(GeneralUse reservation){
+
+    }
+
     public List<Inspections> getInspections(){
         return inspections;
     }
@@ -22,6 +26,10 @@ public class FacilityUseImpl implements FacilityUse{
         this.inspections = inspections;
     }
 
+    public void addInspection(Inspections inspection){
+
+    }
+    
     public boolean isInUseDuringInterval(String targetDate){
         boolean isInUse = false;
         return isInUse;
