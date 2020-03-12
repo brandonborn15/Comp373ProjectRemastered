@@ -3,6 +3,7 @@ package src.facility_use;
 public class GeneralUseImpl implements GeneralUse {
     private String resDate;
 
+    //Getters and Setters-------------------------------------------------------------------------------------------------------------------
     public String getResDate(){
         return resDate;
     }
@@ -11,15 +12,16 @@ public class GeneralUseImpl implements GeneralUse {
         this.resDate = resDate;
     }
 
-    public void assignFacilityToUse(int atendees){
+    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
+    public void assignFacilityToUse(int atendees){ //Not finished
 
     }
 
-    public void listActualUsage(){
+    public void listActualUsage(){ //Not finished
 
     }
 
-    public Double calcUsageRate(){
+    public Double calcUsageRate(){ //Not finished
         Double usageRate = 0.00;
         return usageRate;
     }

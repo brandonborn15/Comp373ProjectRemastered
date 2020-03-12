@@ -1,8 +1,8 @@
 package tests.facility_maintenance;
 
-import src.facility_maintenance.Requests;
+import src.facility_maintenance.Request;
 
-public class TestRequests{
+public class TestRequest{
     
     //Test getter and setter for maintRequest
     //Test makeFacilityMaintRequest

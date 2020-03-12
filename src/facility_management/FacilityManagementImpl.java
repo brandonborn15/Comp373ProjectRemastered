@@ -1,14 +1,13 @@
 package src.facility_management;
 
 import src.facility.Facility;
-import src.facility.FacilityImpl;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class FacilityManagementImpl implements FacilityManagement{
     public List<Facility> facilities;
 
+    //Getters and Setters-------------------------------------------------------------------------------------------------------------------
     public List<Facility> getFacilities(){
         return facilities;
     }
@@ -17,24 +16,16 @@ public class FacilityManagementImpl implements FacilityManagement{
         this.facilities = facilities;
     }
 
-    
-    public String listFacilities(){
-        FacilityImpl fac = new FacilityImpl();
-        String facilityNames = fac.names.toString();
-        System.out.println(fac.names);
-        return facilityNames;
-
-    }
-
-    public void addNewFacility(Facility facility){
+    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
+    public void addNewFacility(Facility facility){ //Finished
         this.facilities.add(facility);
     }
 
-    public void removeFacility(Facility facility){
+    public void removeFacility(Facility facility){ //Finished
         this.facilities.remove(facility);
     }
 
-    public void getFacilityInformation(Facility facility){
+    public void getFacilityInformation(Facility facility){ //Not finished
 
     }
 }

@@ -3,19 +3,20 @@ package src.facility_maintenance;
 import java.util.List;
 
 public class FacilityMaintenanceImpl implements FacilityMaintenance {
-    private List<Requests> requests;
+    private List<Request> requests;
     private List<ScheduleMaintenance> schedMaints;
 
-    public List<Requests> getRequests(){
+    //Getters, Setters, and Add Methods----------------------------------------------------------------------------------------------------
+    public List<Request> getRequests(){
         return requests;
     }
 
-    public void setRequests(List<Requests> requests){
+    public void setRequests(List<Request> requests){
         this.requests = requests;
     }
 
-    public void addRequest(Requests request){
-        
+    public void addRequest(Request request){
+        requests.add(request);
     }
 
     public List<ScheduleMaintenance> getSchedMaints(){
@@ -27,19 +28,20 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
     }
 
     public void addSchedMaint(ScheduleMaintenance schedMaint){
-        
+        schedMaints.add(schedMaint);
     }
 
-    public Double calcProblemRateForFacility(){
+    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
+    public Double calcProblemRateForFacility(){ //Not finished
         Double problemRate = 0.00;
         return problemRate;
     }
 
-    public void listMaintRequests(){
+    public void listMaintRequests(){ //Not finished
 
     }
 
-    public void listMaintenance(){
+    public void listMaintenance(){ //Not finished
         
     }
 }
