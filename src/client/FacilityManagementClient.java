@@ -40,17 +40,21 @@ public class FacilityManagementClient{
         //Set Up Schedule Maintenance Object
         ScheduleMaintenanceImpl schedMaint1 = new ScheduleMaintenanceImpl();
         schedMaint1.setMaintDate("04/09/2020");
+        schedMaint1.calcMaintenanceCostForFacility(100.0);
+        schedMaint1.calcDownTimeForFacility(5);
 
         //Set Up Facility Maintenance Object
         FacilityMaintenanceImpl facMaint1 = new FacilityMaintenanceImpl();
         facMaint1.makeFacilityMaintRequest(request);
+        facMaint1.scheduleMaintenance(schedMaint1);
 
         //Set Up Facility Object
         FacilityImpl facility1 = new FacilityImpl();
         facility1.setFacilityCapacity(3000);
         facility1.setFacilityName("damen den");
-        facility1.addFacilityMaint(facMaint1);
-        facility1.addFacilityUse(facUse1);
+        facility1.addFacilityDetail("This facility is a small room in Damen Student Center");
+        facility1.setFacilityMaint(facMaint1);
+        facility1.setFacilityUse(facUse1);
         
         //------------------------------------------------------Little Objects---------------------------------------------------------------------------
         FacilityImpl facility2 = new FacilityImpl();
@@ -62,10 +66,10 @@ public class FacilityManagementClient{
         facility3.setFacilityName("sullivan center");
         //---------------------------------------------------------------------------------------------------------------------------------
         manage.addNewFacility(facility1);//add the new facilities created to the Facility Management
-        manage.addNewFacility(facility2);
-        manage.addNewFacility(facility3);
+        //manage.addNewFacility(facility2);
+        //manage.addNewFacility(facility3);
 
-        facilities = manage.getFacilities();//retrieves the list of all facilities
+        /*facilities = manage.getFacilities();//retrieves the list of all facilities
         System.out.println(facilities.size());
         System.out.println(facilities);//will print the hashcode locations for these facilities
 
@@ -78,6 +82,15 @@ public class FacilityManagementClient{
 
         System.out.println(facMaint1.listMaintenance());
         //System.out.println(facUse1.list());
+        System.out.println(manage.getFacilityInformation(facility1));*/
+        facilities = manage.getFacilities();
+        for (Facility facility : facilities){
+            FacilityUseImpl fU = facility.getFacilityUse();
+            boolean x = fU.isInUseDuringInterval("04/11/2020");
+            if (x == true){
+                System.out.println("YUP");
+            }
+        }
     }
 
 

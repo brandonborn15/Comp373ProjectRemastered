@@ -4,7 +4,6 @@ import src.facility.*;
 
 import java.util.LinkedList;
 import java.util.List;
-//import java.util.Objects;
 
 public class FacilityManagementImpl implements FacilityManagement{
     public List<FacilityImpl> facilities;
@@ -21,7 +20,6 @@ public class FacilityManagementImpl implements FacilityManagement{
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
     public void addNewFacility(FacilityImpl facility){ //FINISHED
-        //System.out.println(facility);
         this.fac.add(facility);
     }
 
@@ -37,15 +35,11 @@ public class FacilityManagementImpl implements FacilityManagement{
         return facilityNames;
     }
 
-    public LinkedList<String> getFacilityInformation(FacilityImpl facility){ //Not finished 
-        //Return a list of Strings containing: facilityName, facilityCapacity, any inspections, and reservations, any requests, and any scheduledMaintenance
+    public LinkedList<String> getFacilityInformation(FacilityImpl facility){ //FINISHED
         LinkedList<String> info = new LinkedList<String>();
-        String facilityName = facility.getFacilityName();
-        int facilityCapacityInt = facility.getFacilityCapacity();
-        String facilityCapacity = Integer.toString(facilityCapacityInt);
-        info.add(facilityName);
-        info.add(facilityCapacity);
-
+        info.add(facility.getFacilityName());
+        info.add(Integer.toString(facility.getFacilityCapacity()));
+        info.add(facility.getDescription());
         return info;
     }
 }

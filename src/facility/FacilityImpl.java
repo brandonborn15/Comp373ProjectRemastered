@@ -1,7 +1,5 @@
 package src.facility;
 
-import java.util.LinkedList;
-
 import src.facility_use.*;
 import src.facility_maintenance.*;
 
@@ -9,8 +7,8 @@ public class FacilityImpl implements Facility {
     private String facilityName;
     private int facilityCapacity;
     private String description;
-    private LinkedList<FacilityUseImpl> facilityUses = new LinkedList<>();
-    private LinkedList<FacilityMaintenanceImpl> facilityMaints = new LinkedList<>();
+    private FacilityUseImpl facilityUse;
+    private FacilityMaintenanceImpl facilityMaint;
 
     //Getters, Setters, and Add Methods-----------------------------------------------------------------------------------------------------
     public String getFacilityName(){
@@ -29,32 +27,24 @@ public class FacilityImpl implements Facility {
         this.facilityCapacity = facilityCapacity;
     }
 
-    public LinkedList<FacilityUseImpl> getFacilityUses(){
-        return facilityUses;
-    }
-
     public String getDescription(){
         return description;
     }
-
-    public void setFacilityUses(LinkedList<FacilityUseImpl> facilityUses){
-        this.facilityUses = facilityUses;
+    
+    public FacilityUseImpl getFacilityUse(){
+        return facilityUse;
     }
 
-    public void addFacilityUse(FacilityUseImpl facilityUse){
-        facilityUses.add(facilityUse);
+    public void setFacilityUse(FacilityUseImpl facilityUse){
+        this.facilityUse = facilityUse;
     }
 
-    public LinkedList<FacilityMaintenanceImpl> getFacilityMaints(){
-        return facilityMaints;
+    public FacilityMaintenanceImpl getFacilityMaint(){
+        return facilityMaint;
     }
 
-    public void setFacilityMaints(LinkedList<FacilityMaintenanceImpl> facilityMaints){
-        this.facilityMaints = facilityMaints;
-    }
-
-    public void addFacilityMaint(FacilityMaintenanceImpl facilityMaint){
-        facilityMaints.add(facilityMaint);
+    public void setFacilityMaint(FacilityMaintenanceImpl facilityMaint){
+        this.facilityMaint = facilityMaint;
     }
 
     //Required Methods for Assignment-----------------------------------------------------------------------------------------------------

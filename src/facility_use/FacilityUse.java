@@ -15,7 +15,7 @@ public interface FacilityUse {
     public boolean isInUseDuringInterval(String targetDate);
     public void vacateFacility(String vacateDate);
 
-    public void listInspections(); //Not finished moved to facility use
+    public void listInspections();
     public Double calcUsageRate();
     public void listActualUsage();
     public void assignFacilityToUse(int atendees);

@@ -24,32 +24,60 @@ public class FacilityUseImpl implements FacilityUse{
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void addReservation(GeneralUseImpl reservation){ //Finished
+    public void addReservation(GeneralUseImpl reservation){ //FINISHED
         res.add(reservation);
     }
     
-    public void scheduleInspection(InspectionImpl inspection){ //Finished
+    public void scheduleInspection(InspectionImpl inspection){ //FINISHED
         ins.add(inspection);
     }
 
-    public boolean isInUseDuringInterval(String targetDate){ //Not finished take in target date, check if it already exists, return boolean true or false
+    public boolean isInUseDuringInterval(String targetDate){ //FINISHED
         boolean isInUse = false;
+        LinkedList<String> usedDates = new LinkedList<String>();
+        for (GeneralUseImpl gU : res){
+            usedDates.add(gU.getResDate());
+        }
+        for (Inspection i : ins){
+            usedDates.add(i.getInspectionDate());
+        }
+        for (String date : usedDates){
+            if (date.equals(targetDate)){
+                isInUse = true;
+            }
+        }
         return isInUse;
     }
 
     public void vacateFacility(String vacateDate){ //Not finished returns the date that reoccurs for the corrsiponding facility
+        LinkedList<String> vacatedDates = new LinkedList<String>();
+        LinkedList<GeneralUseImpl> toDelGU = new LinkedList<GeneralUseImpl>();
+        for (GeneralUseImpl gU : res){
+            String gUD = gU.getResDate();
+            if (gUD.equals(vacateDate)){
+                vacatedDates.add(gUD);
+                res.remove(gU);
+            }
+        }
+        for (Inspection i : ins){
+            usedDates.add(i.getInspectionDate());
+        }
 
     }
+
     public void listActualUsage(){ //Not finished
 
     }
+
     public Double calcUsageRate(){ //Not finished moved to facility use, size of reservations/90 return number 
         Double usageRate = 0.00;
         return usageRate;
     }
+
     public void assignFacilityToUse(int atendees){ //Not finished
 
     }
+
     public void listInspections(){ //Not finished moved to facility use
 
     }

@@ -2,6 +2,8 @@ package src.facility_maintenance;
 
 public class ScheduleMaintenanceImpl implements ScheduleMaintenance {
     private String maintDate;
+    private int downTime;
+    private Double maintCost;
 
     //Getters and Setters------------------------------------------------------------------------------------------------------------------
     public String getMaintDate(){
@@ -12,14 +14,32 @@ public class ScheduleMaintenanceImpl implements ScheduleMaintenance {
         this.maintDate = maintDate;
     }
 
-    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public int calcDownTimeForFacility(){ //Not finished add variables to schedule maintnents object private int downtime
-        int downTime = 0;
+    public int getDownTime(){
         return downTime;
     }
 
-    public Double calcMaintenanceCostForFacility(){ //Not finished
-        Double maintCost = 0.00;
+    public void setDownTime(int downTime){
+        this.downTime = downTime;
+    }
+
+    public Double getMaintCost(){
+        return maintCost;
+    }
+
+    public void setMaintCost(Double maintCost){
+        this.maintCost = maintCost;
+    }
+
+    //Required Methods for Assignment------------------------------------------------------------------------------------------------------
+    public int calcDownTimeForFacility(int estimate){ //FINISHED
+        int downTime = estimate * 2;
+        setDownTime(downTime);
+        return downTime;
+    }
+
+    public Double calcMaintenanceCostForFacility(Double estimate){ //FINISHED
+        Double maintCost = estimate * 2.00;
+        setMaintCost(maintCost);
         return maintCost;
     }
 }

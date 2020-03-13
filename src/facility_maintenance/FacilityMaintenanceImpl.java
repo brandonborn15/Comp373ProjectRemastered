@@ -24,22 +24,22 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
-    public void makeFacilityMaintRequest(RequestImpl request){ //Finished
+    public void makeFacilityMaintRequest(RequestImpl request){ //FINISHED
         requests.add(request);
     }
     
-    public void scheduleMaintenance(ScheduleMaintenanceImpl schedMaint){ //Finished
+    public void scheduleMaintenance(ScheduleMaintenanceImpl schedMaint){ //FINISHED
         schedMaints.add(schedMaint);
     }
 
-    public Double calcProblemRateForFacility(){ //Finished
+    public Double calcProblemRateForFacility(){ //FINISHED
         Double problemRate;
         int problems = requests.size();
         problemRate = problems / 90.0;
         return problemRate;
     }
 
-    public LinkedList<String> listMaintRequests(){ //Finished
+    public LinkedList<String> listMaintRequests(){ //FINISHED
         LinkedList<String> reqs = new LinkedList<String>();
         for (Request request : requests){
             reqs.add(request.getMaintRequest());
@@ -47,9 +47,9 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         return reqs;
     }
 
-    public LinkedList<String> listMaintenance(){ //Finished
+    public LinkedList<String> listMaintenance(){ //FINISHED
         LinkedList<String> sMs = new LinkedList<String>();
-        for (ScheduleMaintenance sM : schedMaints){
+        for (ScheduleMaintenanceImpl sM : schedMaints){
             sMs.add(sM.getMaintDate());
         }
         return sMs;
