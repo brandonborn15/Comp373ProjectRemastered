@@ -3,42 +3,42 @@ package src.facility_use;
 import java.util.LinkedList;
 
 public class FacilityUseImpl implements FacilityUse{
-    private LinkedList<InspectionImpl> ins = new LinkedList<>();
-    private LinkedList<GeneralUseImpl> res = new LinkedList<>();
+    private LinkedList<InspectionImpl> inspections = new LinkedList<>();
+    private LinkedList<GeneralUseImpl> reservations = new LinkedList<>();
 
     //Getters, Setters, and Add Methods-----------------------------------------------------------------------------------------------------
     public LinkedList<GeneralUseImpl> getReservations(){
-        return res;
+        return reservations;
     }
 
-    public void setReservations(LinkedList<GeneralUseImpl> res){
-        this.res = res;
+    public void setReservations(LinkedList<GeneralUseImpl> reservations){
+        this.reservations = reservations;
     }
 
     public LinkedList<InspectionImpl> getInspections(){
-        return ins;
+        return inspections;
     }
 
-    public void setInspections(LinkedList<InspectionImpl> ins){
-        this.ins = ins;
+    public void setInspections(LinkedList<InspectionImpl> inspections){
+        this.inspections = inspections;
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
     public void addReservation(GeneralUseImpl reservation){ //FINISHED
-        res.add(reservation);
+        reservations.add(reservation);
     }
     
     public void scheduleInspection(InspectionImpl inspection){ //FINISHED
-        ins.add(inspection);
+        inspections.add(inspection);
     }
 
     public boolean isInUseDuringInterval(String targetDate){ //FINISHED
         boolean isInUse = false;
         LinkedList<String> usedDates = new LinkedList<String>();
-        for (GeneralUseImpl gU : res){
+        for (GeneralUseImpl gU : reservations){
             usedDates.add(gU.getResDate());
         }
-        for (Inspection i : ins){
+        for (Inspection i : inspections){
             usedDates.add(i.getInspectionDate());
         }
         for (String date : usedDates){
@@ -49,36 +49,44 @@ public class FacilityUseImpl implements FacilityUse{
         return isInUse;
     }
 
-    public void vacateFacility(String vacateDate){ //Not finished returns the date that reoccurs for the corrsiponding facility
+    public LinkedList<String> vacateFacility(String vacateDate){ //FINISHED
         LinkedList<String> vacatedDates = new LinkedList<String>();
-        LinkedList<GeneralUseImpl> toDelGU = new LinkedList<GeneralUseImpl>();
-        for (GeneralUseImpl gU : res){
+        for (GeneralUseImpl gU : reservations){
             String gUD = gU.getResDate();
             if (gUD.equals(vacateDate)){
                 vacatedDates.add(gUD);
-                res.remove(gU);
+                reservations.remove(gU);
             }
         }
-        for (Inspection i : ins){
-            usedDates.add(i.getInspectionDate());
+        for (Inspection i : inspections){
+            String iD = i.getInspectionDate();
+            if (iD.equals(vacateDate)){
+                vacatedDates.add(iD);
+                inspections.remove(i);
+            }
         }
-
+        return vacatedDates;
     }
 
-    public void listActualUsage(){ //Not finished
-
+    public LinkedList<String> listActualUsage(){ //FINISHED
+        LinkedList<String> actualUsage = new LinkedList<String>();
+        for (GeneralUse reservation : reservations){
+            actualUsage.add(reservation.getResDate());
+        }
+        return actualUsage;
     }
 
-    public Double calcUsageRate(){ //Not finished moved to facility use, size of reservations/90 return number 
-        Double usageRate = 0.00;
+    public Double calcUsageRate(){ //FINISHED
+        int size = reservations.size();
+        Double usageRate = size / 90.0;
         return usageRate;
     }
 
-    public void assignFacilityToUse(int atendees){ //Not finished
-
-    }
-
-    public void listInspections(){ //Not finished moved to facility use
-
+    public LinkedList<String> listInspections(){ //FINISHED
+        LinkedList<String> inspectionsList = new LinkedList<String>();
+        for (Inspection inspection : inspections){
+            inspectionsList.add(inspection.getInspectionDate());
+        }
+        return inspectionsList;
     }
 }

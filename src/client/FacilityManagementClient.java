@@ -86,10 +86,7 @@ public class FacilityManagementClient{
         facilities = manage.getFacilities();
         for (Facility facility : facilities){
             FacilityUseImpl fU = facility.getFacilityUse();
-            boolean x = fU.isInUseDuringInterval("04/11/2020");
-            if (x == true){
-                System.out.println("YUP");
-            }
+            System.out.println(fU.listInspections());
         }
     }
 

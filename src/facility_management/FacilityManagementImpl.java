@@ -42,4 +42,9 @@ public class FacilityManagementImpl implements FacilityManagement{
         info.add(facility.getDescription());
         return info;
     }
+
+    public String assignFacilityToUse(int atendees){ //TODO: NOT FINISHED - This needs to take in a number of atendees and return the name of a facility that could fit that many people
+        String temp = "";
+        return temp;
+    }
 }

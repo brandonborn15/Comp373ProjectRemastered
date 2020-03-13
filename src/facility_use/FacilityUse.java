@@ -13,11 +13,10 @@ public interface FacilityUse {
     public void scheduleInspection(InspectionImpl inspection);
     
     public boolean isInUseDuringInterval(String targetDate);
-    public void vacateFacility(String vacateDate);
+    public LinkedList<String> vacateFacility(String vacateDate);
 
-    public void listInspections();
+    public LinkedList<String> listInspections(); 
     public Double calcUsageRate();
-    public void listActualUsage();
-    public void assignFacilityToUse(int atendees);
+    public LinkedList<String> listActualUsage();
 
 }
