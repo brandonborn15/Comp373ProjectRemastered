@@ -5,9 +5,9 @@ public class GeneralUseImpl implements GeneralUse {
 
     //Getters and Setters-------------------------------------------------------------------------------------------------------------------
     public String getResDate(){
-        return resDate;
+        return resDate;// returns the string of the reservation date
     }
     public void setResDate(String resDate){
-        this.resDate = resDate;
+        this.resDate = resDate;//sets the string of a reservation date from user input
     }
 }

@@ -8,19 +8,19 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
 
     //Getters, Setters, and Add Methods----------------------------------------------------------------------------------------------------
     public LinkedList<RequestImpl> getRequests(){
-        return requests;
+        return requests; //returnt he lists of requests
     }
 
     public void setRequests(LinkedList<RequestImpl> requests){
-        this.requests = requests;
+        this.requests = requests; // set the list of requests
     }
 
     public LinkedList<ScheduleMaintenanceImpl> getSchedMaints(){
-        return schedMaints;
+        return schedMaints;//return the lict of the scheduled maintenance
     }
 
-    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints){ //not finished
-        this.schedMaints = schedMaints;
+    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints){ //TODO :not finished
+        this.schedMaints = schedMaints; // set the lists of requests
     }
 
     //Required Methods for Assignment------------------------------------------------------------------------------------------------------
