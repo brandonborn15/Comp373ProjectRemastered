@@ -17,6 +17,8 @@ public interface Facility {
     public void setFacilityMaint(FacilityMaintenanceImpl facilityMaint);
     
     public int requestAvailableCapacity(int numAtendees);
+
+    public String getDescription();
     public void addFacilityDetail(String description);
 
 }
