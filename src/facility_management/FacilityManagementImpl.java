@@ -44,7 +44,19 @@ public class FacilityManagementImpl implements FacilityManagement{
     }
 
     public String assignFacilityToUse(int atendees){ //TODO: NOT FINISHED - This needs to take in a number of atendees and return the name of a facility that could fit that many people
-        String temp = "";
+        LinkedList<String> possibilities = new LinkedList<String>();
+        String temp;
+        for(FacilityImpl facility : fac){
+            int option;
+            option = facility.getFacilityCapacity();
+            if (option>=atendees){
+                possibilities.add(facility.getFacilityName());
+            }
+        }
+        if (possibilities.size() == 0){
+            temp = "There are no possible locations for your event.";
+        }
+        else{temp = "Possible facility locations: "+possibilities.toString();}
         return temp;
     }
 }
