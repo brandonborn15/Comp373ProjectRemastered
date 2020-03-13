@@ -15,7 +15,7 @@ There were several ideas we had for this project that we were not able to implem
 This program was made for a company that provides eventspaces for clients. We use Loyola as a hard coded example. So therefore a facility object would be a representation of an event space with variables like facility name (Gentile Arena), and facility capacity (5000).
 
 # Folder Separation
-All the source code can be found in src and all the tests can be found in tests. Within src the folders are broken up by layer with facility_management being the highest, facility being below that, and both facility_use and facility_maintenance below that. Within the folders are all files that are part of that layer. src also has a client folder that is home to the aforementioned FacilityManagementClient class that demonstrates the program. The tests folder is similarly divided. All classes have an interface that they implement.
+All the source code can be found in src and all the tests can be found in tests. Within src the folders are broken up by layer with facility_management being the highest, facility being below that, and both facility_use and facility_maintenance below that. Within the folders are all files that are part of that layer. src also has a client folder that is home to the aforementioned FacilityManagementClient class that demonstrates the program. The tests folder is similarly divided. All classes have an interface that they implement. We also have a folder containing PDF files of diagrams of our program.
 
 # FacilityManagementClient
 Running this file will output information about a FacilityManagement Object that we have hardcoded into the program.
@@ -43,6 +43,9 @@ Request is where you can make the Request objects. Request objects have one vari
 
 # ScheduleMaintenance
 ScheduleMaintenance is where you can make the ScheduleMaintenance objects. ScheduleMaintenance objects have 3 variables: maintenance cost, downtime, and maintenance date. There are getters and setters for all the variables. Also you can calculate the maitenance cost and downtime given an estimate.
+
+# pdf_diagrams
+In this folder you will find two PDF files: one that is the UML diagram for this program and one that is an architecture diagram of our FacilityManagement object.
 
 # Testing
 Testing has not been implemented yet.
