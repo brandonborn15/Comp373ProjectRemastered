@@ -1,9 +1,9 @@
 package tests.maintest;
 
-import tests.facility_use;
-import tests.facility;
-import tests.facility_maintenance;
-import tests.facility_management;
+import tests.facility_use.*;
+import tests.facility.*;
+import tests.facility_maintenance.*;
+import tests.facility_management.*;
 
 public class AllTests{
 
