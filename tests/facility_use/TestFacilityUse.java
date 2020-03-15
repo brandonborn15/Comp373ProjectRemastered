@@ -7,7 +7,7 @@ import src.facility_use.*;
 public class TestFacilityUse{
 
     public void testFacilityUse(){
-        LinkedList<InspectionImpl> inspections = new LinkedList<>();
+        /*LinkedList<InspectionImpl> inspections = new LinkedList<>();
         LinkedList<GeneralUseImpl> reservations = new LinkedList<>();
         LinkedList<InspectionImpl> test1 = new LinkedList<InspectionImpl>();
         LinkedList<GeneralUseImpl> test2 = new LinkedList<GeneralUseImpl>();
@@ -29,7 +29,7 @@ public class TestFacilityUse{
             System.out.println("Passed");
         } else{
             System.out.println("Failed");
-        }
+        }*/
         //Test addReservation
         //Test scheduleInspection
         //Test isInUseDuringInterval

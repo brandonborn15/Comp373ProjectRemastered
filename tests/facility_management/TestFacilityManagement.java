@@ -5,7 +5,7 @@ import src.facility_management.FacilityManagement;
 public class TestFacilityManagement{
 
     public void testFacilityManagement(){
-        LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
+        /*LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
         LinkedList<String test = new LinkedList<String>();
         LinkedList<FacilityImpl> test1 = new LinkedList<FacilityImpl>();
         FacilityImpl fac = new FacilityImpl();
@@ -24,7 +24,7 @@ public class TestFacilityManagement{
             System.out.println("Passed");
         } else {
             System.out.println("Failed");
-        }
+        }*/
     }
     //Test addNewFacility
     //Test removeFacility
