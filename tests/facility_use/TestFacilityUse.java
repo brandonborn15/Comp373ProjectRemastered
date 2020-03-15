@@ -1,11 +1,13 @@
 package tests.facility_use;
 
-import src.facility_use.FacilityUse;
+import src.facility_use.*;
 
 public class TestFacilityUse{
-    
-    //Test getter and setter for reservations
-    //Test getter and setter for inspections
+    private LinkedList<InspectionImpl> inspections = new LinkedList<>();
+    private LinkedList<GeneralUseImpl> reservations = new LinkedList<>();
+    InspectionImpl inspec = new InspectionImpl;
+    GeneralUseImpl gU = new GeneralUseImpl;
+    FacilityUseImpl fU = new FacilityUseImpl;
     //Test isInUseDuringInterval
     //Test vacateFacility
     
