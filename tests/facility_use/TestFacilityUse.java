@@ -8,7 +8,7 @@ public class TestFacilityUse{
     LinkedList<InspectionImpl> inspections = new LinkedList<>();
     LinkedList<GeneralUseImpl> reservations = new LinkedList<>();
     LinkedList<InspectionImpl> test1 = new LinkedList<InspectionImpl>();
-    LinkedList<GeneralUseImpl test2 = new LinkedList<GeneralUseImpl>();
+    LinkedList<GeneralUseImpl> test2 = new LinkedList<GeneralUseImpl>();
     InspectionImpl inspec = new InspectionImpl();
     GeneralUseImpl gU = new GeneralUseImpl();
     FacilityUseImpl fU = new FacilityUseImpl();
