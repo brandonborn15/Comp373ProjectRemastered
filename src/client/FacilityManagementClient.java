@@ -11,7 +11,6 @@ public class FacilityManagementClient{
 
     public static void main(String[] args) {
         
-        
         FacilityManagementImpl manage = new FacilityManagementImpl();
         LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
 

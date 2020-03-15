@@ -4,7 +4,7 @@ import src.facility_use.GeneralUseImpl.*;
 
 public class TestGeneralUse{
     
-    /*public void testGenUse(){
+    public void testGenUse(){
         GeneralUseImpl genUse1 = new GeneralUseImpl();
         genUse1.setResDate("03/30/2020");
         String test = genUse1.getResDate();
@@ -13,5 +13,5 @@ public class TestGeneralUse{
         } else {
             System.out.println("Failed");
         }
-    }*/
+    }
 }
