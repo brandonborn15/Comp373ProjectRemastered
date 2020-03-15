@@ -19,7 +19,7 @@ public class FacilityMaintenanceImpl implements FacilityMaintenance {
         return schedMaints;//return the lict of the scheduled maintenance
     }
 
-    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints){ //TODO :not finished
+    public void setSchedMaints(LinkedList<ScheduleMaintenanceImpl> schedMaints){ //FINISHED
         this.schedMaints = schedMaints; // set the lists of requests
     }
 
