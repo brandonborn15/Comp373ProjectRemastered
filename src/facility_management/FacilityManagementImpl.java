@@ -43,8 +43,9 @@ public class FacilityManagementImpl implements FacilityManagement{
         return info;
     }
 
-    public LinkedList<String> assignFacilityToUse(int atendees){ //FINISHED takes in a number of atendees and return the name of a facility that could fit that many people
+    public String assignFacilityToUse(int atendees){ //FINISHED takes in a number of atendees and return the name of a facility that could fit that many people
         LinkedList<String> possibilities = new LinkedList<String>();//needs a temporary list to make possibilities
+        String temp;
         for(FacilityImpl facility : fac){//checking each object in the list
             int option;
             option = facility.getFacilityCapacity();
@@ -53,11 +54,9 @@ public class FacilityManagementImpl implements FacilityManagement{
             }
         }
         if (possibilities.size() == 0){//if the list of possible facilities is empty then there are no locations
-            possibilities.add("NO Facilities"); // return that there is no possibilities
-            return possibilities;
+            temp = "There are no possible locations for your event."; // return that there is no possibilities
         }
-        else{
-            return possibilities;
-           }//returns what facilities are avalible for the given space
+        else{temp = "Possible facility locations: "+possibilities.toString();}//returns what facilities are avalible for the given space
+        return temp;
     }
 }
