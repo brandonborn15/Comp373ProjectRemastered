@@ -13,7 +13,7 @@ public class TestGeneralUse{
         if (test.equals("03/30/2020")){
             System.out.println("Passed");
         } else {
-            System.out.println("Failed");
+            System.out.println("Failed:\t Testing General Use");
         }
     }
 }

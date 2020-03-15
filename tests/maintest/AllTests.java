@@ -15,10 +15,25 @@ import tests.facility_use.*;
 public class AllTests{
 
    public static void main(String[] args){
-        System.out.println("This is a test");
         TestGeneralUse tgu = new TestGeneralUse();
+        System.out.println("Testing General Use");
         tgu.testGenUse();
+            System.out.println();
+
         TestInspection ti = new TestInspection();
+        System.out.println("Testing Inspections");
         ti.testInspec();
+            System.out.println();
+
+        TestFacility tf = new TestFacility();
+        System.out.println("Testing Facility");
+        tf.testName();
+        tf.testCapacity();
+        //tf.testFacilityUse();
+        tf.TestFacilityDetial();
+        tf.testRequestCapacity();
+
+        TestFacilityMaintenance tfm = new TestFacilityMaintenance();
+        
     }
 }

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import src.facility_use.*;
 
 public class TestFacilityUse{
-    LinkedList<InspectionImpl> inspections = new LinkedList<>();
+   /* LinkedList<InspectionImpl> inspections = new LinkedList<>();
     LinkedList<GeneralUseImpl> reservations = new LinkedList<>();
     LinkedList<InspectionImpl> test1 = new LinkedList<InspectionImpl>();
     LinkedList<GeneralUseImpl> test2 = new LinkedList<GeneralUseImpl>();
@@ -18,6 +18,6 @@ public class TestFacilityUse{
     fU.setInspections(inspections);
     
     //Test isInUseDuringInterval
-    //Test vacateFacility
+    //Test vacateFacility*/
     
 }
