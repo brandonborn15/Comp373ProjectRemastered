@@ -34,7 +34,10 @@ public class AllTests{
         tf.TestFacilityDetial();
         tf.testRequestCapacity();
 
-        TestFacilityMaintenance tfm = new TestFacilityMaintenance();
+        TestScheduleMaintenance tsm = new TestScheduleMaintenance();
+        tsm.testMaintCost();
+        tsm.testMaintDate();
+        tsm.testMaintTime();
 
     }
 }
