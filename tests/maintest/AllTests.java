@@ -18,8 +18,7 @@ public class AllTests{
         System.out.println("This is a test");
         TestGeneralUse tgu = new TestGeneralUse();
         tgu.testGenUse();
-        FacilityImpl fac = new FacilityImpl();
-        fac.setFacilityCapacity(3000);
-        fac.setFacilityName("damen");
+        TestInspection ti = new TestInspection();
+        ti.testInspec();
     }
 }
