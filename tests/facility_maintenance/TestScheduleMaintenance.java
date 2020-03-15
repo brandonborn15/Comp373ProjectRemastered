@@ -31,6 +31,7 @@ public class TestScheduleMaintenance{
         else{System.out.println(sm.getDownTime());
             System.out.println("Failed:\t Testing Maintenance Time");}
     }
+   
     
     //Test getter and setter for maintDate
     //Test scheduleMaintenance

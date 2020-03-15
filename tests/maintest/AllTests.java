@@ -33,11 +33,19 @@ public class AllTests{
         //tf.testFacilityUse();
         tf.TestFacilityDetial();
         tf.testRequestCapacity();
+            System.out.println();
 
         TestScheduleMaintenance tsm = new TestScheduleMaintenance();
+        System.out.println("Testing Schedule Maintenance");
         tsm.testMaintCost();
         tsm.testMaintDate();
         tsm.testMaintTime();
+            System.out.println();
+
+        TestRequest tr = new TestRequest();
+        System.out.println("Testing Requests");
+        tr.testRequest();
+            System.out.println();
 
     }
 }
