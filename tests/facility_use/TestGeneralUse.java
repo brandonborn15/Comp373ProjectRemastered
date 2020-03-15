@@ -1,6 +1,6 @@
 package tests.facility_use;
 
-import src.facility_use.GeneralUseImpl;
+import src.facility_use.GeneralUseImpl.*;
 
 public class TestGeneralUse{
     
