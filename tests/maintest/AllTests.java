@@ -15,6 +15,7 @@ import tests.facility_use.*;
 public class AllTests{
 
    public static void main(String[] args){
+            System.out.println();
         TestGeneralUse tgu = new TestGeneralUse();
         System.out.println("Testing General Use");
         tgu.testGenUse();
@@ -34,6 +35,6 @@ public class AllTests{
         tf.testRequestCapacity();
 
         TestFacilityMaintenance tfm = new TestFacilityMaintenance();
-        
+
     }
 }
