@@ -40,6 +40,8 @@ public class AllTests{
         tsm.testMaintCost();
         tsm.testMaintDate();
         tsm.testMaintTime();
+        tsm.testCostMath();
+        tsm.testHourMath();
             System.out.println();
 
         TestRequest tr = new TestRequest();
