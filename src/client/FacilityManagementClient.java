@@ -79,11 +79,11 @@ public class FacilityManagementClient{
         //---------------------------------------------------------------------------------------------------------------------------------
         //Set Up Facility Objects
         FacilityImpl facility1 = new FacilityImpl();
-        facility1.setFacilityCapacity(3000);//this object of a facility adds the capacity
-        facility1.setFacilityName("damen den");//this object of a facility adds the facility name
-        facility1.addFacilityDetail("This facility is a small room in Damen Student Center");//this object of a facility adds the description of the facility
-        facility1.setFacilityMaint(facMaint1);//this object of a facility adds all the maintenance related dates and descriptions
-        facility1.setFacilityUse(facUse1);//this object of a facility adds all the facility use dates
+        facility1.setFacilityCapacity(3000);
+        facility1.setFacilityName("damen den");
+        facility1.addFacilityDetail("This facility is a small room in Damen Student Center");
+        facility1.setFacilityMaint(facMaint1);
+        facility1.setFacilityUse(facUse1);
         
         FacilityImpl facility2 = new FacilityImpl();
         facility2.setFacilityCapacity(7000);
@@ -121,25 +121,25 @@ public class FacilityManagementClient{
 
 
         System.out.println("\t--------------------------Facility Maintenance Informaiton--------------------------\n");
-        System.out.println("The maintenance list for "+facility1.getFacilityName()+" is:\t\t\t"+facMaint1.listMaintenance()+"\n");//recalls the facility name then lists out its personal maintenance schedule
+        System.out.println("The maintenance list for "+facility1.getFacilityName()+" is:\t\t\t"+facMaint1.listMaintenance()+"\n");
         System.out.println("The maintenance list for "+facility2.getFacilityName()+" is:\t\t"+facMaint2.listMaintenance()+"\n");
         System.out.println("The maintenance list for "+facility3.getFacilityName()+" is:\t\t"+facMaint3.listMaintenance()+"\n");
 
 
         System.out.println("\t--------------------------Facility Inspections Informaiton--------------------------\n");
-        System.out.println("The Inspections list for "+facility1.getFacilityName()+" is:\t\t\t"+facUse1.listInspections()+"\n");//recalls the facility name then lists out its personal inspections schedule
+        System.out.println("The Inspections list for "+facility1.getFacilityName()+" is:\t\t\t"+facUse1.listInspections()+"\n");
         System.out.println("The Inspections list for "+facility2.getFacilityName()+" is:\t\t"+facUse2.listInspections()+"\n");
         System.out.println("The Inspections list for "+facility3.getFacilityName()+" is:\t\t"+facUse3.listInspections()+"\n");
 
         
         System.out.println("\t--------------------------Facility Reservations Informaiton-------------------------\n");
-        System.out.println("The Reservations list for "+facility1.getFacilityName()+" is:\t\t\t"+facUse1.listActualUsage()+"\n");//recalls the facility name then lists out its personal reservation schedule
+        System.out.println("The Reservations list for "+facility1.getFacilityName()+" is:\t\t\t"+facUse1.listActualUsage()+"\n");
         System.out.println("The Reservations list for "+facility2.getFacilityName()+" is:\t\t"+facUse2.listActualUsage()+"\n");
         System.out.println("The Reservations list for "+facility3.getFacilityName()+" is:\t\t"+facUse3.listActualUsage()+"\n");
     
 
         System.out.println("\t----------------------------Facility General Informaiton----------------------------\n");
-        System.out.println("The information provided is for number 1 on the list:\t"+manage.getFacilityInformation(facility1)+"\n");//recales the detialed description of the given facility name
+        System.out.println("The information provided is for number 1 on the list:\t"+manage.getFacilityInformation(facility1)+"\n");
         System.out.println("The information provided is for number 2 on the list:\t"+manage.getFacilityInformation(facility2)+"\n");
         System.out.println("The information provided is for number 3 on the list:\t"+manage.getFacilityInformation(facility3)+"\n");
         
