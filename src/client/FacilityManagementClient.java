@@ -2,6 +2,11 @@ package src.client;
 
 import java.util.LinkedList;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
 import src.facility.*;
 import src.facility_maintenance.*;
 import src.facility_management.*;
@@ -9,7 +14,9 @@ import src.facility_use.*;
 
 public class FacilityManagementClient{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
+        //ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+        //System.out.println("***************** Application Context instantiated! ******************");
         
         FacilityManagementImpl manage = new FacilityManagementImpl();
         LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
