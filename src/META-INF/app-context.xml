@@ -12,3 +12,14 @@
 <bean id="schedMaint" class="facility_maintenance.ScheduleMaintenanceImpl" scope="prototype"/>
 <bean id="facility" class="facility.FacilityImpl" scope="prototype"/>
 
+<bean id="genUse" class="facility_use.GeneralUseImpl" scope="prototype">
+<bean id="inspection" class="facility_use.InspectionImpl" scope="prototype">
+
+<bean id="manage" class="facility_management.FacilityManagementImpl" scope="prototype">
+
+<bean id="request" class="facility_maintenance.RequestImpl" scope="prototype">
+<bean id="sechdule" class="facility_maintenance.ScheduleMaintenanceImpl" scope="prototype">
+
+</beans>
+
+

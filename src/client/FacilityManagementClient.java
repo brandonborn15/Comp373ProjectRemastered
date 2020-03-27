@@ -15,8 +15,8 @@ import src.facility_use.*;
 public class FacilityManagementClient{
 
     public static void main(String[] args) throws Exception{
-        //ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
-        //System.out.println("***************** Application Context instantiated! ******************");
+        ApplicationContext context = new ClassPathXmlApplicationContext("src/META-INF/app-context.xml");
+        System.out.println("***************** Application Context instantiated! ******************");
         
         FacilityManagementImpl manage = new FacilityManagementImpl();
         LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
