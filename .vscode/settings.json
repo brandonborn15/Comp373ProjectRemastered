@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/apple/Desktop/eclipse programs/spring-framework-5.2.3.RELEASE/libs/spring-beans-5.2.3.RELEASE.jar",
+        "/Users/apple/Desktop/eclipse programs/commons-io-2.6/commons-io-2.6.jar",
+        "/Users/apple/Desktop/eclipse programs/commons-logging-1.2/commons-logging-1.2.jar",
+        "/Users/apple/Desktop/eclipse programs/spring-framework-5.2.3.RELEASE/libs/spring-aop-5.2.3.RELEASE.jar",
+        "/Users/apple/Desktop/eclipse programs/spring-framework-5.2.3.RELEASE/libs/spring-context-5.2.3.RELEASE.jar",
+        "/Users/apple/Desktop/eclipse programs/spring-framework-5.2.3.RELEASE/libs/spring-core-5.2.3.RELEASE.jar",
+        "/Users/apple/Desktop/eclipse programs/spring-framework-5.2.3.RELEASE/libs/spring-expression-5.2.3.RELEASE.jar"
+    ]
+}
