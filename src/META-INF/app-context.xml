@@ -10,16 +10,20 @@
 <discription>Wiring the dependencies for the facility management application.</description>
 <context:componet-scan base-package="Comp373ProjectRemastered" />
 
-<bean id="facUse" class="facility_use.FacilityUseImpl" scope="prototype"/>
-<bean id="schedMaint" class="facility_maintenance.ScheduleMaintenanceImpl" scope="prototype"/>
+<bean id="facilityUse" class="facility_use.FacilityUseImpl" scope="prototype"/>
+
+<bean id="maintenance" class="facility_maintenance.FacilityMaintenanceImpl" scope="prototype"/>
+
 <bean id="facility" class="facility.FacilityImpl" scope="prototype"/>
 
-<bean id="genUse" class="facility_use.GeneralUseImpl" scope="prototype">
+<bean id="generalUse" class="facility_use.GeneralUseImpl" scope="prototype">
+
 <bean id="inspection" class="facility_use.InspectionImpl" scope="prototype">
 
-<bean id="manage" class="facility_management.FacilityManagementImpl" scope="prototype">
+<bean id="management" class="facility_management.FacilityManagementImpl" scope="prototype">
 
 <bean id="request" class="facility_maintenance.RequestImpl" scope="prototype">
+
 <bean id="sechdule" class="facility_maintenance.ScheduleMaintenanceImpl" scope="prototype">
 
 </beans>
