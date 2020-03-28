@@ -16,28 +16,43 @@ public class FacilityManagementClient{
 
     public static void main(String[] args) throws Exception{
         //TODO: All this dont work because of the xml for some reason
-        /*
+        //************************************* Spring update **************************************** */
         ApplicationContext context = new ClassPathXmlApplicationContext("src/META-INF/app-context.xml");
         System.out.println("***************** Application Context instantiated! ******************");
 
         GeneralUseImpl generaluse = (GeneralUseImpl) context.getBean("generalUse");
             generaluse.setResDate("04/20/2020");
+
         InspectionImpl inspection = (InspectionImpl) context.getBean("inspection");
             inspection.setInspectionDate("04/21/2020");
+
         FacilityUseImpl facilityuse = (FacilityUseImpl) context.getBean("facilityUse");
             facilityuse.scheduleInspection(inspection);
             facilityuse.addReservation(generaluse);
 
         RequestImpl request = (RequestImpl) context.getBean("request");
             request.setMaintRequest("The toilets are clogged");
+
         ScheduleMaintenanceImpl schedule = (ScheduleMaintenanceImpl) context.getBean("schedule");
             schedule.setMaintDate("04/10/2020");
             schedule.calcMaintenanceCostForFacility(100.0);
             schedule.calcDownTimeForFacility(2);
+
         FacilityMaintenanceImpl maintenance = (FacilityMaintenanceImpl) context.getBean("maintenance");
             maintenance.makeFacilityMaintRequest(request);
             maintenance.scheduleMaintenance(schedule);
-            */
+
+        FacilityImpl facility = (FacilityImpl) context.getBean("facility");
+            facility.setFacilityCapacity(3000);
+            facility.setFacilityName("damen den");
+            facility.addFacilityDetail("This facility is a small room in Damen Student Center");
+            facility.setFacilityMaint(maintenance);
+            facility.setFacilityUse(facilityuse);
+        FacilityManagementImpl management = (FacilityManagementImpl) context.getBean("management");
+        management.getFacilityInformation(facility);
+        management.listFacilities();
+
+            
 
 
         FacilityManagementImpl manage = new FacilityManagementImpl();
