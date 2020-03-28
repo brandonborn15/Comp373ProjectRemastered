@@ -15,9 +15,18 @@ import src.facility_use.*;
 public class FacilityManagementClient{
 
     public static void main(String[] args) throws Exception{
-        ApplicationContext context = new ClassPathXmlApplicationContext("src/META-INF/app-context.xml");
+        //TODO: All this dont work because of the xml for some reason
+        /*ApplicationContext context = new ClassPathXmlApplicationContext("src/META-INF/app-context.xml");
         System.out.println("***************** Application Context instantiated! ******************");
-        
+
+        GeneralUseImpl generaluse = (GeneralUseImpl) context.getBean("genUse");
+        generaluse.setResDate("04/20/2020");
+        InspectionImpl inspection = (InspectionImpl) context.getBean("inspection");
+        inspection.setInspectionDate("04/21/2020");
+        FacilityUseImpl facilityuse = (FacilityUseImpl) context.getBean("facUse");
+        facilityuse.setReservations(generaluse);
+        facilityuse.setInspections(inspection);*/
+
         FacilityManagementImpl manage = new FacilityManagementImpl();
         LinkedList<FacilityImpl> facilities = new LinkedList<FacilityImpl>();
 
