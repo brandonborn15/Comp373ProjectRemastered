@@ -2,7 +2,8 @@
 By: Thomas Walsh and Brandon Moy
 
 # How To Run
-You can run this program by accessing the FacilityManagementClient file that can be found in src -> client. Run the main method and it will print out the results of some hard coded examples. You can also tes individual methods from all classes by running tests from the files that can be found in the tests folder.
+You can run this program by accessing the FacilityManagementClient file that can be found in src -> client. Run the main method and it will print out the results of some hard coded examples. You can also tes individual methods from all classes by running tests from the files that can be found in the tests folder. 
+NOTE: You need to add all the dependencies that were listed in the SRD at 2.5.
 
 # Ideas That Were Not Fully Realized
 There were several ideas we had for this project that we were not able to implement due to lack of time or lack of knowledge.
