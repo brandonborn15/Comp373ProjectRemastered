@@ -2,15 +2,8 @@
 By: Thomas Walsh and Brandon Moy
 
 # How To Run
-You can run this program by accessing the FacilityManagementClient file that can be found in src -> client. Run the main method and it will print out the results of some hard coded examples. You can also tes individual methods from all classes by running tests from the files that can be found in the tests folder. 
+You can run this program by accessing the FacilityManagementClient file that can be found in src -> client. Run the main method and it will print out the results of some hard coded examples. You can also test individual methods from all classes by running tests from the files that can be found in the tests folder. 
 NOTE: You need to add all the dependencies that were listed in the SRD at 2.5.
-
-# Ideas That Were Not Fully Realized
-There were several ideas we had for this project that we were not able to implement due to lack of time or lack of knowledge.
-- Storing data
-    - We wanted to store all information in a database but we have no experience with database programming
-    - We wanted to store all information in HashMaps and then save/overwrite data saved in CSV files so data persisted between uses
-    - We don't know how to use JUnit so our unit testing has not been implemented yet
 
 # Our Interpretation Of The Project
 This program was made for a company that provides eventspaces for clients. We use Loyola as a hard coded example. So therefore a facility object would be a representation of an event space with variables like facility name (Gentile Arena), and facility capacity (5000).
@@ -47,6 +40,3 @@ ScheduleMaintenance is where you can make the ScheduleMaintenance objects. Sched
 
 # pdf_diagrams
 In this folder you will find two PDF files: one that is the UML diagram for this program and one that is an architecture diagram of our FacilityManagement object.
-
-# Testing
-Testing has not been implemented yet.
