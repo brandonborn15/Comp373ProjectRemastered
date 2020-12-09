@@ -1,6 +1,9 @@
 # Facility Management Project
 By: Thomas Walsh and Brandon Moy
 
+# About
+This project is a demonstration of file structure in Java. This code is for a company that rents out facilities for events. For example, if you wanted to host an event at Loyola, we would have facilities like: Gentile Arena, Damen Den, Mundelein Auditoreum, etc.
+
 # How To Run
 You can run this program by accessing the FacilityManagementClient file that can be found in src -> client. Run the main method and it will print out the results of some hard coded examples. You can also test individual methods from all classes by running tests from the files that can be found in the tests folder. 
 NOTE: You need to add all the dependencies that were listed in the SRD at 2.5.
